@@ -19,17 +19,17 @@ if($rol==1){
 
 
     if($conexion->execute($sqlconsul)){
-        echo "<p>El usuario ya existe</p>";
-        echo "<a href='../indexInterno.php?page=inicioInterno'>volver</a>";
+        header("Location: ../index.php?page=usuarioExistente");
     }else{
         $conexion->execute($sql);
 
         if($conexion->query($sqlconsul)){
-            echo "<p>Registro exitoso</p>";
-            echo "<a href='../indexInterno.php?page=inicioInterno'>Inicio</a>";
+           /* echo "<p>Registro exitoso</p>";
+            echo "<a href='../indexInterno.php?page=inicioInterno'>Inicio</a>";*/
+            header("Location: ../index.php?page=iniciarSesion");
         }else{
-            echo "Error";
-            echo "<a href='../indexInterno.php?page=inicioInterno'>Volver</a>";
+
+            header("Location: ../index.php?page=registroFallido");
 
         }
         $conexion->close();
@@ -40,17 +40,20 @@ if($rol==1){
 
 
     if($conexion->query($sqlconsul)){
-        echo "<p>El usuario ya existe</p>";
-        echo "<a href='../index.php?page=registrarse'>volver</a>";
+       /* echo "<p>El usuario ya existe</p>";
+        echo "<a href='../index.php?page=registrarse'>volver</a>";*/
+        header("Location: ../index.php?page=usuarioExistente");
     }else{
         $conexion->execute($sql);
 
         if($conexion->query($sqlconsul)){
-            echo "<p>Registro exitoso</p>";
-            echo "<a href='../index.php?page=inicio'>Inicio</a>";
+           /* echo "<p>Registro exitoso</p>";
+            echo "<a href='../index.php?page=inicio'>Inicio</a>";*/
+            header("Location: ../index.php?page=iniciarSesion");
         }else{
-            echo "Error";
-            echo "<a href='../index.php?page=registrarse'>Volver</a>";
+           /* echo "Error";
+            echo "<a href='../index.php?page=registrarse'>Volver</a>";*/
+            header("Location: ../index.php?page=registroFallido");
 
         }
         $conexion->close();

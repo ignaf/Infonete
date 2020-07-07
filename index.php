@@ -16,6 +16,18 @@ switch ($page){
         $controller->execute();
         break;
 
+    case "usuarioExistente":
+        include_once("controller/UsuarioExistenteController.php");
+        $controller = new UsuarioExistenteController();
+        $controller->execute();
+        break;
+
+    case "registroFallido":
+        include_once("controller/RegistroFallidoController.php");
+        $controller = new RegistroFallidoController();
+        $controller->execute();
+        break;
+
     case "iniciarSesion":
         include_once("controller/IniciarSesionController.php");
         $controller = new IniciarSesionController();
