@@ -15,11 +15,13 @@ class InicioInternoController
             case 1:
                 $modelo= new VerModel();
                 $noticias= $modelo->obtenerNoticias();
+                $noti= $modelo->obtenerNoticiasPendientes();
                 include_once("view/inicioInternoViewAdmin.php");
             break;
             case 2:
                 $modelo= new VerModel();
                 $noticias= $modelo->obtenerNoticias();
+                $noti= $modelo->obtenerNoticiasPendientes();
                 include_once("view/inicioInternoViewConten.php");
             break;
             case 3:
