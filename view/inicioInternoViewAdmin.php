@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
 <main>
@@ -33,6 +34,19 @@
         <div class='w3-third'>
             <p>" . strtoupper($noticia['titulo']) . "</p>"
                 . "<img src=" .$noticia['url_imagen'] ." width=200 height=120 >".
+                "</div>  
+        </a>
+        ";
+        }
+
+        foreach ($noti as $noticia){
+            $id=$noticia['id_noticia'];
+            echo "
+        <a href='indexInterno?page=noticia&id=$id'>
+        <div class='w3-third'>
+            <p>" . strtoupper($noticia['titulo']) . "</p>"
+                . "<img src=" .$noticia['url_imagen'] ." width=200 height=120 >
+                <i style='font-size:24px' class='fas'>&#xf06a;</i>".
                 "</div>  
         </a>
         ";
