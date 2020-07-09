@@ -15,4 +15,9 @@ class VerModel
         return $noticias;
     }
 
+    public function obtenerNoticiasPendientes(){
+        $noti=$this->conexion->query("SELECT * FROM noticia WHERE estado=0");
+        return $noti;
+    }
+
 }
