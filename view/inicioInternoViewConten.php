@@ -5,12 +5,12 @@
     <div align="center">
         <h2 class="w3-wide w3-padding-16">Bienvenido Contenidista</h2>
 
-        <h3>¿Que puedo hacer actualmente?</h3>
+       <!-- <h3>¿Que puedo hacer actualmente?</h3>
         <div class="w3-container w3-padding-32 ">
             <a href="indexInterno?page=agregarNoticias" class="w3-button w3-round-xxlarge w3-blue-grey">Agregar noticias</a>
             <a href="indexInterno?page=agregarPublicacion" class="w3-button w3-round-xxlarge w3-blue-grey">Agregar diario/seccion/edicion</a>
         </div>
-
+-->
 
         <h3 class="w3-wide">Noticias Recientes</h3>
 

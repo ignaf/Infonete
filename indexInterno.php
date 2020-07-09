@@ -4,8 +4,13 @@ session_start();
 
 $rol=$_SESSION['rol'];
 $id=$_GET['id'];
-
 $page = isset($_GET[ "page" ]) ? $_GET[ "page" ] : "inicioInterno";
+
+if($rol==1){
+    include_once ("view/partial/subHeaderAdmin.php");
+}elseif ($rol==2){
+    include_once ("view/partial/subHeaderConten.php");
+}
 
 switch ($page){
     case "inicioInterno":
