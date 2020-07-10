@@ -15,9 +15,19 @@ class VerModel
         return $noticias;
     }
 
-    public function obtenerNoticiasPendientes(){
-        $noti=$this->conexion->query("SELECT * FROM noticia WHERE estado=0");
-        return $noti;
+    public function obtenerNoticiasPendientes($id_usuario, $rol){
+        if($rol==1){
+            $noti=$this->conexion->query("SELECT * FROM noticia WHERE estado=0");
+            return $noti;
+        }elseif ($rol==2){
+            $noti=$this->conexion->query("SELECT * FROM noticia WHERE estado=0 AND id_autor=$id_usuario");
+            return $noti;
+        }
+    }
+
+    public function obtenerDiarios(){
+        $diarios= $this->conexion->query("SELECT * FROM diario WHERE estado=1");
+        return $diarios;
     }
 
 }

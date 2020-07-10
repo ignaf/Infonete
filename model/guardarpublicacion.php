@@ -5,6 +5,7 @@ session_start();
 
 $conexion = new Database();
 $rol = $_SESSION['rol'];
+$autor = $_SESSION['id_usuario'];
 
 $titulo = $_POST['titulo'];
 $tipo = $_POST['tipo'];
@@ -41,7 +42,7 @@ switch ($tipo) {
         break;
 
     case 4:
-        $sql = "INSERT INTO noticia(titulo,cuerpo,url_imagen,estado,id_seccion,id_edicion,id_diario) VALUES ('$titulo','$cuerpo','$ruta','$estado','$id_seccion','$id_edicion','$id_diario')";
+        $sql = "INSERT INTO noticia(titulo,cuerpo,url_imagen,estado,id_seccion,id_edicion,id_diario, id_autor) VALUES ('$titulo','$cuerpo','$ruta','$estado','$id_seccion','$id_edicion','$id_diario','$autor')";
         $sqlconsul = "SELECT noti.titulo FROM noticia AS noti WHERE noti.titulo='$titulo';";
 
 }
