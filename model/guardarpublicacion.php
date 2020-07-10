@@ -49,14 +49,16 @@ switch ($tipo) {
 
 
 if($conexion->query($sqlconsul)){
-    echo "<p>Título existente</p>";
-    echo "<a href='../indexInterno.php?page=inicioInterno'>Volver</a>";
+    header("location: ../indexInterno.php?page=publicacionExistente");
+    /*echo "<p>Título existente</p>";
+    echo "<a href='../indexInterno.php?page=inicioInterno'>Volver</a>";*/
 }else{
     $conexion->execute($sql);
     if($conexion->query($sqlconsul)){
         header("location: ../indexInterno.php?page=inicioInterno");
     }else{
-        echo "<p>Error</p>";
-        echo "<a href='../indexInterno.php?page=inicioInterno'>Volver</a>";
+       header("location: ../indexInterno.php?page?publicacionFallida");
+       /* echo "<p>Error</p>";
+        echo "<a href='../indexInterno.php?page=inicioInterno'>Volver</a>";*/
     }
 }
