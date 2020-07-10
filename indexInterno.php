@@ -39,6 +39,18 @@ switch ($page){
         $controller->executePublicaciones();
         break;
 
+    case "publicacionExistente":
+        include_once("controller/PublicacionExistenteController.php");
+        $controller = new PublicacionExistenteController();
+        $controller->execute();
+        break;
+
+    case "publicacionFallida":
+        include_once("controller/PublicacionFallidaController.php");
+        $controller = new PublicacionFallidaController();
+        $controller->execute();
+        break;
+
     case "abmContenidistas":
         include_once ("controller/AltaBajaContenidistasController.php");
         $controller= new AltaBajaContenidistasController();
