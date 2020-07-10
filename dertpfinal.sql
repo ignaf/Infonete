@@ -85,12 +85,14 @@ estado tinyint,
 id_seccion integer,
 id_edicion integer,
 id_diario integer,
+id_autor mediumint,
 primary key(id_noticia),
 foreign key(estado) references estado(id_estado),
 foreign key(id_edicion) references edicion(id_edicion),
 foreign key(id_diario) references diario(id_diario),
 foreign key(id_seccion) references seccion(id_seccion),
-foreign key(id_tipo) references tipo_publicacion(id_tipo));
+foreign key(id_tipo) references tipo_publicacion(id_tipo),
+foreign key(id_autor) references usuario(id_usuario));
 
 create table compraNoticia(
 id_compra integer auto_increment,

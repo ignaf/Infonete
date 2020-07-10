@@ -22,7 +22,7 @@ class NoticiaController{
                 $noticia=$modelo->mostrarNoticia($id_noticia);
                 include_once ("view/NoticiaView.php");
             }else{
-                $id_noticia=$id_noticia;
+
                 include_once ("view/CompraNoticiaView.php");
             }
         }

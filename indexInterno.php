@@ -17,7 +17,7 @@ switch ($page){
     case "inicioInterno":
         include_once ("controller/InicioInternoController.php");
         $controller = new InicioInternoController();
-        $controller->execute($rol);
+        $controller->execute($rol, $id_usuario);
         break;
 
     case "agregarNoticias":
@@ -50,6 +50,8 @@ switch ($page){
         $controller= new NoticiaController();
         $controller->execute($id_noticia, $id_usuario, $rol);
         break;
+
+
 
     case "compraNoticia":
         include_once ("controller/CompraNoticiaController.php");

@@ -9,19 +9,20 @@ class InicioInternoController
         include_once "model/VerModel.php";
     }
 
-    public function execute($rol)
+    public function execute($rol, $id_usuario)
     {
         switch ($rol){
             case 1:
                 $modelo= new VerModel();
                 $noticias= $modelo->obtenerNoticias();
-                $noti= $modelo->obtenerNoticiasPendientes();
+                $noti= $modelo->obtenerNoticiasPendientes($id_usuario, $rol);
+
                 include_once("view/inicioInternoViewAdmin.php");
             break;
             case 2:
                 $modelo= new VerModel();
                 $noticias= $modelo->obtenerNoticias();
-                $noti= $modelo->obtenerNoticiasPendientes();
+                $noti= $modelo->obtenerNoticiasPendientes($id_usuario, $rol);
                 include_once("view/inicioInternoViewConten.php");
             break;
             case 3:
