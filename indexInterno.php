@@ -72,6 +72,12 @@ switch ($page){
         break;
 
 
+    case "graficos":
+        include_once ("controller/GraficosController.php");
+        $controller= new GraficosController();
+        $controller->execute($rol);
+        break;
+
 }
 
 //include_once("view/partial/footer.php");
