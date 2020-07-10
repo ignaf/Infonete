@@ -92,7 +92,18 @@ foreign key(id_diario) references diario(id_diario),
 foreign key(id_seccion) references seccion(id_seccion),
 foreign key(id_tipo) references tipo_publicacion(id_tipo));
 
-
+create table compraNoticia(
+id_compra integer auto_increment,
+id_usuario mediumint,
+id_noticia integer,
+numero_tarjeta bigint,
+nombre_tarjeta varchar(100),
+año_vencimiento_tarjeta tinyint,
+mes_vencimiento_tarjeta tinyint,
+codigo_seguridad_tarjeta integer,
+primary key(id_compra),
+foreign key(id_usuario) references usuario(id_usuario),
+foreign key(id_noticia) references noticia(id_noticia));
 
 /*create table suscripcion(
 id_suscripcion integer auto_increment,

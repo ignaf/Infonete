@@ -23,6 +23,7 @@ class AgregarController
         $modelo = new AgregarModel();
         $diarios = $modelo->obtenerDiariosExistentes();
         $ediciones = $modelo->obtenerEdicionesExistentes();
+        $opciones = $modelo->obtenerOpciones();
         include_once("view/agregarPublicacionView.php");
     }
 

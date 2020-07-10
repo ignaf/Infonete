@@ -3,7 +3,8 @@ include_once("view/partial/headerInterno.php");
 session_start();
 
 $rol=$_SESSION['rol'];
-$id=$_GET['id'];
+$id_usuario=$_SESSION['id_usuario'];
+$id_noticia=$_GET['id'];
 $page = isset($_GET[ "page" ]) ? $_GET[ "page" ] : "inicioInterno";
 
 if($rol==1){
@@ -47,7 +48,13 @@ switch ($page){
     case "noticia":
         include_once ("controller/NoticiaController.php");
         $controller= new NoticiaController();
-        $controller->execute($id);
+        $controller->execute($id_noticia, $id_usuario, $rol);
+        break;
+
+    case "compraNoticia":
+        include_once ("controller/CompraNoticiaController.php");
+        $controller= new CompraNoticiaController();
+        $controller->execute();
         break;
 
 
