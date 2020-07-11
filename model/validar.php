@@ -11,7 +11,7 @@ $usuario= $_POST['usuario'];
 $clave = $_POST['clave'];
 $clave = md5($clave);
 
-$sql = "SELECT * FROM usuario WHERE nombre='$usuario' AND contraseña='$clave';";
+$sql = "SELECT * FROM usuario WHERE nombre='$usuario' AND contrasena='$clave';";
 $resul = $conexion->query($sql);
 
 $arrayusuario = $resul[0];

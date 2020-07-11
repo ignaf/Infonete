@@ -1,6 +1,3 @@
-<html>
-<head></head>
-<body>
 <main>
     <div class="w3-container w3-light-gray">
         <h3 class="w3-wide w3-margin-left">Iniciar Sesión</h3>
@@ -13,6 +10,3 @@
             <input type="submit" value="Login" class="w3-btn w3-blue-grey w3-margin-left w3-margin-top-5">
         </form>
 </main>
-</body>
-</html>
-

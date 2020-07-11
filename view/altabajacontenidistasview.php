@@ -1,7 +1,3 @@
-<html>
-<head></head>
-<body>
-
 <main class="w3-center">
     <div align="center">
         <br>
@@ -30,6 +26,3 @@
         </table>
     </div>
 </main>
-
-</body>
-</html>

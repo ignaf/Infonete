@@ -4,7 +4,7 @@ session_start();
 
 $rol=$_SESSION['rol'];
 $id_usuario=$_SESSION['id_usuario'];
-$id_noticia=$_GET['id'];
+$id_noticia = isset($_GET['id']) ? $_GET['id'] : "";
 $page = isset($_GET[ "page" ]) ? $_GET[ "page" ] : "inicioInterno";
 
 if($rol==1){
@@ -80,7 +80,7 @@ switch ($page){
 
 }
 
-//include_once("view/partial/footer.php");
+include_once("view/partial/footer.php");
 
 ?>
 

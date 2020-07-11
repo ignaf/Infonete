@@ -1,9 +1,6 @@
 <?php
 $noticia=$noticia[0];
 ?>
-<html>
-<head></head>
-<body>
 <main>
    <div class="w3-container w3-content w3-center w3-padding-64">
        <?php
@@ -15,5 +12,3 @@ $noticia=$noticia[0];
        ?>
    </div>
 </main>
-</body>
-</html>

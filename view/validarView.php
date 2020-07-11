@@ -1,59 +1,3 @@
-<html>
-<script>
-    function optionChange(sel){
-        if(sel.value==1){
-            tab1 = document.getElementById("diarios");
-            tab1.style.display="";
-
-            tab2 = document.getElementById("ediciones");
-            tab2.style.display="none";
-
-            tab2 = document.getElementById("secciones");
-            tab2.style.display="none";
-
-            tab2 = document.getElementById("noticias");
-            tab2.style.display="none";
-        }else if(sel.value==2){
-            tab1 = document.getElementById("diarios");
-            tab1.style.display="none";
-
-            tab2 = document.getElementById("ediciones");
-            tab2.style.display="";
-
-            tab2 = document.getElementById("secciones");
-            tab2.style.display="none";
-
-            tab2 = document.getElementById("noticias");
-            tab2.style.display="none";
-        }else if(sel.value==3){
-            tab1 = document.getElementById("diarios");
-            tab1.style.display="none";
-
-            tab2 = document.getElementById("ediciones");
-            tab2.style.display="none";
-
-            tab2 = document.getElementById("secciones");
-            tab2.style.display="";
-
-            tab2 = document.getElementById("noticias");
-            tab2.style.display="none";
-        }else if(sel.value==4){
-            tab1 = document.getElementById("diarios");
-            tab1.style.display="none";
-
-            tab2 = document.getElementById("ediciones");
-            tab2.style.display="none";
-
-            tab2 = document.getElementById("secciones");
-            tab2.style.display="none";
-
-            tab2 = document.getElementById("noticias");
-            tab2.style.display="";
-        }
-    }
-</script>
-<head></head>
-<body>
 <main class="w3-center">
     <div align="center">
         <br>
@@ -149,7 +93,57 @@
 
     </div>
 </main>
+<script>
+    function optionChange(sel){
+        if(sel.value==1){
+            tab1 = document.getElementById("diarios");
+            tab1.style.display="";
 
-</body>
-</html>
+            tab2 = document.getElementById("ediciones");
+            tab2.style.display="none";
+
+            tab2 = document.getElementById("secciones");
+            tab2.style.display="none";
+
+            tab2 = document.getElementById("noticias");
+            tab2.style.display="none";
+        }else if(sel.value==2){
+            tab1 = document.getElementById("diarios");
+            tab1.style.display="none";
+
+            tab2 = document.getElementById("ediciones");
+            tab2.style.display="";
+
+            tab2 = document.getElementById("secciones");
+            tab2.style.display="none";
+
+            tab2 = document.getElementById("noticias");
+            tab2.style.display="none";
+        }else if(sel.value==3){
+            tab1 = document.getElementById("diarios");
+            tab1.style.display="none";
+
+            tab2 = document.getElementById("ediciones");
+            tab2.style.display="none";
+
+            tab2 = document.getElementById("secciones");
+            tab2.style.display="";
+
+            tab2 = document.getElementById("noticias");
+            tab2.style.display="none";
+        }else if(sel.value==4){
+            tab1 = document.getElementById("diarios");
+            tab1.style.display="none";
+
+            tab2 = document.getElementById("ediciones");
+            tab2.style.display="none";
+
+            tab2 = document.getElementById("secciones");
+            tab2.style.display="none";
+
+            tab2 = document.getElementById("noticias");
+            tab2.style.display="";
+        }
+    }
+</script>
 

@@ -8,12 +8,12 @@ $id_noticia=$_GET['id_noticia'];
 $numtarj=$_POST['numerotarjeta'];
 $nombretarj=$_POST['nombretarjeta'];
 $mes=$_POST['mes_venc'];
-$año=$_POST['año_venc'];
+$ano=$_POST['ano_venc'];
 $codigo=$_POST['codigo_seg'];
 
 
-$sql = "INSERT INTO compraNoticia(id_usuario, id_noticia, numero_tarjeta, nombre_tarjeta, año_vencimiento_tarjeta, mes_vencimiento_tarjeta, codigo_seguridad_tarjeta) 
-                                    VALUES ('$id_usuario', '$id_noticia', '$numtarj', '$nombretarj', '$año', '$mes', '$codigo');";
+$sql = "INSERT INTO compraNoticia(id_usuario, id_noticia, numero_tarjeta, nombre_tarjeta, ano_vencimiento_tarjeta, mes_vencimiento_tarjeta, codigo_seguridad_tarjeta) 
+                                    VALUES ('$id_usuario', '$id_noticia', '$numtarj', '$nombretarj', '$ano', '$mes', '$codigo');";
 
 $sqlconsul = "SELECT id_compra FROM compraNoticia WHERE id_noticia='$id_noticia' AND id_usuario='$id_usuario';";
 

@@ -1,9 +1,3 @@
-<html>
-<head>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-</head>
-<body>
 <main>
     <div align="center">
         <h2 class="w3-wide w3-padding-16">Bienvenido Contenidista</h2>
@@ -51,9 +45,5 @@
         </div>
     </div>
 </main>
-
-
-</body>
-</html>
 
 

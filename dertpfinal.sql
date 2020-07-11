@@ -12,7 +12,7 @@ create table usuario(
 id_usuario MEDIUMINT NOT NULL AUTO_INCREMENT,
 nombre varchar(20) not null,
 mail varchar(50) not null,
-contraseña varchar(50) not null,
+contrasena varchar(50) not null,
 id_grupo integer not null,
 primary key(id_usuario),
 foreign key (id_grupo) references grupo(id_grupo));
@@ -100,7 +100,7 @@ id_usuario mediumint,
 id_noticia integer,
 numero_tarjeta bigint,
 nombre_tarjeta varchar(100),
-año_vencimiento_tarjeta tinyint,
+ano_vencimiento_tarjeta tinyint,
 mes_vencimiento_tarjeta tinyint,
 codigo_seguridad_tarjeta integer,
 primary key(id_compra),
@@ -158,7 +158,7 @@ values
 
 /*la contraseña del admin es 123456*/
 insert into usuario
-(nombre, mail, contraseña, id_grupo)
+(nombre, mail, contrasena, id_grupo)
 values
 ("igna", "ignaa88@gmail.com", "e10adc3949ba59abbe56e057f20f883e", 1);
 

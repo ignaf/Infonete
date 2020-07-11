@@ -48,7 +48,7 @@ switch ($page){
         break;
 }
 
-//include_once("view/partial/footer.php");
+include_once("view/partial/footer.php");
 
 ?>
 

@@ -1,90 +1,3 @@
-<html>
-<head>
-    <script>
-        var opcionesCargadas = JSON.parse('<?php echo json_encode($opciones); ?>');
-
-        function getDiarios(opciones) {
-            var retorno = {};
-            opciones.forEach((option) => {
-                if (!retorno[option.id_diario]) {
-                    retorno[option.id_diario] = option.diario_nombre;
-                }
-            });
-            return retorno;
-        }
-
-        function addOptionsDiarios(diarios) {
-            var selectdiarios = document.getElementById("diario");
-            Object.keys(diarios).forEach((id) => {
-                selectdiarios.add(new Option(diarios[id], id, false, false));
-            });
-            if (selectdiarios[0]) selectdiarios[0].selected = true;
-        }
-
-        function getEdiciones(opciones) {
-            var id_diario_seleccionado = document.getElementById("diario").value;
-            var retorno = {};
-            opciones.forEach((option) => {
-                if (!retorno[option.id_edicion] && option.id_diario == id_diario_seleccionado) {
-                    if (option.descripcion) retorno[option.id_edicion] = option.descripcion;
-                    else retorno[option.id_edicion] = "";
-                }
-            });
-            return retorno;
-        }
-
-        function addOptionsEdiciones(ediciones) {
-            var selectEdiciones = document.getElementById("edi");
-            while (selectEdiciones.length >= 1) {
-                selectEdiciones.remove(0);
-            }
-            Object.keys(ediciones).forEach((id) => {
-                selectEdiciones.add(new Option(ediciones[id], id, false, false));
-            });
-            if (selectEdiciones[0]) selectEdiciones[0].selected = true;
-        }
-
-        function getSecciones(opciones) {
-            var id_diario_seleccionado = document.getElementById("diario").value;
-            var id_edicion_seleccionada = document.getElementById("edi").value;
-            var retorno = {};
-            opciones.forEach((option) => {
-                if (!retorno[option.id_seccion] && option.id_diario == id_diario_seleccionado
-                    && option.id_edicion == id_edicion_seleccionada) {
-                    retorno[option.id_seccion] = option.seccion_nombre;
-                }
-            });
-            return retorno;
-        }
-
-        function addOptionsSecciones(ediciones) {
-            var selectSecciones = document.getElementById("sec");
-            while (selectSecciones.length >= 1) {
-                selectSecciones.remove(0);
-            }
-            Object.keys(ediciones).forEach((id) => {
-                selectSecciones.add(new Option(ediciones[id], id, false, false));
-            });
-            if (selectSecciones[0]) selectSecciones[0].selected = true;
-        }
-
-        function updateDiarios() {
-            addOptionsDiarios(getDiarios(opcionesCargadas));
-            updateEdiciones();
-        }
-
-        function updateEdiciones() {
-            addOptionsEdiciones(getEdiciones(opcionesCargadas));
-            updateSecciones();
-        }
-
-        function updateSecciones() {
-            addOptionsSecciones(getSecciones(opcionesCargadas));
-        }
-
-    </script>
-</head>
-<body onload="updateDiarios()">
 <main>
     <div class="w3-container w3-content  w3-padding-64" style="max-width:800px">
         <div class="w3-container w3-center w3-light-gray">
@@ -132,7 +45,87 @@
         </form>
     </div>
 </main>
+<script>
+    var opcionesCargadas = JSON.parse('<?php echo json_encode($opciones); ?>');
+    window.onload = updateDiarios();
+    function getDiarios(opciones) {
+        var retorno = {};
+        opciones.forEach((option) => {
+            if (!retorno[option.id_diario]) {
+                retorno[option.id_diario] = option.diario_nombre;
+            }
+        });
+        return retorno;
+    }
 
-</body>
-</html>
+    function addOptionsDiarios(diarios) {
+        var selectdiarios = document.getElementById("diario");
+        Object.keys(diarios).forEach((id) => {
+            selectdiarios.add(new Option(diarios[id], id, false, false));
+        });
+        if (selectdiarios[0]) selectdiarios[0].selected = true;
+    }
+
+    function getEdiciones(opciones) {
+        var id_diario_seleccionado = document.getElementById("diario").value;
+        var retorno = {};
+        opciones.forEach((option) => {
+            if (!retorno[option.id_edicion] && option.id_diario == id_diario_seleccionado) {
+                if (option.descripcion) retorno[option.id_edicion] = option.descripcion;
+                else retorno[option.id_edicion] = "";
+            }
+        });
+        return retorno;
+    }
+
+    function addOptionsEdiciones(ediciones) {
+        var selectEdiciones = document.getElementById("edi");
+        while (selectEdiciones.length >= 1) {
+            selectEdiciones.remove(0);
+        }
+        Object.keys(ediciones).forEach((id) => {
+            selectEdiciones.add(new Option(ediciones[id], id, false, false));
+        });
+        if (selectEdiciones[0]) selectEdiciones[0].selected = true;
+    }
+
+    function getSecciones(opciones) {
+        var id_diario_seleccionado = document.getElementById("diario").value;
+        var id_edicion_seleccionada = document.getElementById("edi").value;
+        var retorno = {};
+        opciones.forEach((option) => {
+            if (!retorno[option.id_seccion] && option.id_diario == id_diario_seleccionado
+                && option.id_edicion == id_edicion_seleccionada) {
+                retorno[option.id_seccion] = option.seccion_nombre;
+            }
+        });
+        return retorno;
+    }
+
+    function addOptionsSecciones(ediciones) {
+        var selectSecciones = document.getElementById("sec");
+        while (selectSecciones.length >= 1) {
+            selectSecciones.remove(0);
+        }
+        Object.keys(ediciones).forEach((id) => {
+            selectSecciones.add(new Option(ediciones[id], id, false, false));
+        });
+        if (selectSecciones[0]) selectSecciones[0].selected = true;
+    }
+
+    function updateDiarios() {
+        addOptionsDiarios(getDiarios(opcionesCargadas));
+        updateEdiciones();
+    }
+
+    function updateEdiciones() {
+        addOptionsEdiciones(getEdiciones(opcionesCargadas));
+        updateSecciones();
+    }
+
+    function updateSecciones() {
+        addOptionsSecciones(getSecciones(opcionesCargadas));
+    }
+
+</script>
 

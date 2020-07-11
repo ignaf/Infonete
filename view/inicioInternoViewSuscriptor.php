@@ -1,11 +1,3 @@
-
-
-<html>
-<head>
-
-</head>
-<body>
-
 <div class="w3-container w3-content w3-center w3-padding-64" >
     <h2 class="w3-wide">Bienvenido Suscriptor</h2>
 
@@ -27,7 +19,6 @@
     ?>
     </div>
 </div>
-</body>
-</html>
+
 
 
