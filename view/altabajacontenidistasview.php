@@ -15,8 +15,8 @@
                 $id=$usuario['id_usuario'];
                 $id_grupo=$usuario['id_grupo'];
                 echo "<tr>
-                      <td>" . $usuario['nombre'] . "</td>
-                      <td>" . $usuario['nombre_grupo'] . "</td>
+                      <td style='vertical-align: middle;'>" . $usuario['nombre'] . "</td>
+                      <td style='vertical-align: middle;'>" . $usuario['nombre_grupo'] . "</td>
                       <td><a href='../model/altabaja?id=$id&grupo=$id_grupo&el=0' class='w3-button w3-round-xlarge w3-blue-gray'>Cambiar categoria</a></td>
                       <td><a href='../model/altabaja?id=$id&grupo=$id_grupo&el=1' class='w3-button w3-round-xlarge w3-blue-gray'>Eliminar</a></td>
                       
