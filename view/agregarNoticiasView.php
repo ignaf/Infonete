@@ -34,7 +34,10 @@
                 <textarea name="cuerpo" placeholder="Ingrese un cuerpo" rows="10" class="w3-input w3-border w3-light-grey w3-animate-input w3-margin-top" cols="50" required></textarea>
                 <div class="w3-container w3-light-gray w3-margin-top">
                     <label for="imagen" class="w3-margin-right">Imagen</label>
-                    <input type="file" name="imagen" id="imagen" class="w3-margin">
+                    <input type="file" name="imagen" id="imagen" class="w3-margin" onchange="loadFile(event)">
+                    <div style="display: flex; justify-content: center; margin-bottom: 16px;">
+                        <img id="output" style="max-width: 250px; max-height: 200px;"/>
+                    </div>
                 </div>
                 <div class="w3-container w3-center">
                     <input type="submit" value="Publicar" class="w3-btn w3-blue-grey w3-margin-top">
@@ -126,6 +129,16 @@
     function updateSecciones() {
         addOptionsSecciones(getSecciones(opcionesCargadas));
     }
+
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('output');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+
 
 </script>
 
