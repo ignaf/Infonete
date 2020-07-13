@@ -32,7 +32,7 @@
             foreach ($noti as $noticia){
                 $id=$noticia['id_noticia'];
                 echo "
-        <a href='indexInterno?page=validarPublicacion'>
+        <a href='indexInterno?page=noticia&id=$id'>
         <div class='w3-third'>
             <p>" . strtoupper($noticia['titulo']) . "</p>"
                     . "<img src=" .$noticia['url_imagen'] ." width=200 height=120 >
