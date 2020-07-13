@@ -36,7 +36,7 @@
         <div class='w3-third'>
             <p>" . strtoupper($noticia['titulo']) . "</p>"
                     . "<img src=" .$noticia['url_imagen'] ." width=200 height=120 >
-                <i style='font-size:24px' class='fas'>&#xf06a;</i>".
+                <img src='../images/exclamation-icon.png' style='font-size:24px; height: 24px; width: 24px;'/>".
                     "</div>
         </div>
         </a>
